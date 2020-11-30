@@ -49,6 +49,10 @@ function App({ dispatch, filter, todos }) {
   return (
     <div className="App">
       <h1>Todo</h1>
+      <p>Click on each item to toggle complete🦴uncomplete</p>
+      <br />
+      <span>👇</span>
+      <br />
       <input value={todo} onChange={(e) => setTodo(e.target.value)} />
       <button onClick={addTodo}>+</button>
       <div>

@@ -7,3 +7,7 @@
   color: red;
   list-style: none;
 }
+
+p {
+  text-decoration: underline;
+}
