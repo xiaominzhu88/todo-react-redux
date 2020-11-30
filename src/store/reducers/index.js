@@ -23,9 +23,7 @@ function todoList(state = initialState, action) {
           id: genId(),
         },
       ];
-      return Object.assign({}, state, {
-        todos,
-      });
+      return { ...state, todos };
     }
     case 'UPDATE':
       let updatedTodos = [];
@@ -38,9 +36,7 @@ function todoList(state = initialState, action) {
           updatedTodos.push(currentTodo);
         }
       }
-      return Object.assign({}, state, {
-        todos: updatedTodos,
-      });
+      return { ...state, todos: updatedTodos };
 
     case 'FILTER':
       return Object.assign({}, state, {
@@ -48,9 +44,7 @@ function todoList(state = initialState, action) {
       });
 
     case 'REMOVE':
-      return Object.assign({}, state, {
-        todos: [],
-      });
+      return { ...state, todos: [] };
 
     default:
       return state;
